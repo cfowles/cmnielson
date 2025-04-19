@@ -78,7 +78,7 @@
             left: 0;
             width: 0;
             height: 1px;
-            background-color: #1a1a1a;
+            background-color: rgba(0,0,0,0.1);
             transition: width 0.3s ease;
         }
 
@@ -110,7 +110,7 @@
         .hero {
             grid-column: 1 / -1;
             height: 60vh;
-            background: url('./assets/hero2.jpg') center/cover;
+            background: url('/assets/hero2.jpg') center/cover;
             margin: 0;
         }
 
@@ -198,12 +198,23 @@
 
         .gallery-item span {
             display: block;
-            /*font-family: 'Unna', serif;*/
             font-size: 16px;
             font-style: italic;
             text-align: right;
             font-weight: 300;
             color: #666;
+        }
+
+        .email-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .email-icon path {
+            fill: #1a1a1a;
         }
 
         /* Contact Form */
@@ -329,19 +340,19 @@
             <h2>Gallery</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="./assets/1.jpg" alt="Gallery image">
+                    <img src="/assets/1.jpg" alt="Gallery image">
                     <span>Jaqueline Rochester</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="./assets/2.jpg" alt="Gallery image">
+                    <img src="/assets/2.jpg" alt="Gallery image">
                     <span>Scout Dunbar</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="./assets/3.jpg" alt="Gallery image">
+                    <img src="/assets/3.jpg" alt="Gallery image">
                     <span>Robert Daughters</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="./assets/4.jpg" alt="Gallery image">
+                    <img src="/assets/4.jpg" alt="Gallery image">
                     <span>Theodore Waddell</span>
                 </div>
             </div>
@@ -350,8 +361,12 @@
         <section id="contact" data-aos="fade-up" data-aos-delay="300">
             <h2 class="limit-width-desktop">Contact</h2>
             <p class="limit-width-desktop">For appraisal inquiries, please reach out:</p>
-            <p class="limit-width-desktop">Phone: (555) 123-4567<br>
-            Email: info@cmnielson.com</p>
+            <p class="limit-width-desktop">
+                <svg class="email-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <a style="color: #1a1a1a;" href="mailto:cait@cmnielson.com">cait@cmnielson.com</a>
+            </p>
         </section>
     </main>
 
