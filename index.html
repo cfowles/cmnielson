@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM Nielson Appraisals</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         * {
@@ -24,11 +23,12 @@
         body {
             display: flex;
             min-height: 100vh;
+            background: #fefefe;
         }
 
         /* Navigation Styles */
         nav {
-            background: #faf9f7;
+            background: #F3F1ED;
             color: #1a1a1a;
             padding: 2rem;
             position: fixed;
@@ -38,12 +38,20 @@
         }
 
         .logo {
+            font-family: 'Unna', serif;
             font-weight: 700;
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .logo span {
+            font-family: 'Unna', serif;
+            font-size: 1.3rem;
+        }
+
+        .logo .sublogo {
+            font-family: 'Unna', serif;
+            font-style: italic;
             font-weight: 300;
             font-size: 1.3rem;
         }
@@ -90,7 +98,7 @@
 
         /* Main Content Styles */
         main {
-            background: #faf9f7;
+            background: #FAF9F6;
             padding: 4rem;
             margin-left: 300px;
             width: calc(100% - 300px);
@@ -101,8 +109,8 @@
 
         .hero {
             grid-column: 1 / -1;
-            height: 80vh;
-            background: url('https://picsum.photos/1600/1000') center/cover;
+            height: 60vh;
+            background: url('./assets/hero2.jpg') center/cover;
             margin: 0;
         }
 
@@ -115,6 +123,10 @@
         }
 
         /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Unna', serif;
+        }
+
         h1 {
             grid-column: 1 / 8;
             font-size: 4.5rem;
@@ -134,9 +146,38 @@
         p {
             grid-column: 1 / -1;
             line-height: 1.8;
-            color: #666;
+            color: #1a1a1a;
             margin-bottom: 0;
             font-size: 1.1rem;
+        }
+
+        .bio {
+            grid-column: 1 / -1;
+        }
+
+        .bio p {
+            color: #1a1a1a;
+            margin-bottom: 0;
+            margin-bottom: 1rem;
+        }
+
+        .bio ul {
+            list-style-type: disc;
+            margin-left: 1rem;
+            grid-column: 1 / -1;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .bio ul li {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .limit-width-desktop {
+            padding-left: 100px;
+            padding-right: 100px;
         }
 
         /* Gallery Grid */
@@ -153,6 +194,16 @@
             height: 400px;
             object-fit: cover;
             border-radius: 0;
+        }
+
+        .gallery-item span {
+            display: block;
+            /*font-family: 'Unna', serif;*/
+            font-size: 16px;
+            font-style: italic;
+            text-align: right;
+            font-weight: 300;
+            color: #666;
         }
 
         /* Contact Form */
@@ -224,15 +275,24 @@
             .hero {
                 margin-top: -2rem;
             }
+
+            .limit-width-desktop {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">CM NIELSON<br><span>Appraisals</span></div>
+        <div class="logo">C<span>M</span> N<span>IELSON</span><br><span class="sublogo">Appraisals</span></div>
         <div class="separator"></div>
         <ul>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#appraisals">Appraisals</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -244,29 +304,53 @@
         <div class="hero" data-aos="fade-up"></div>
         
         <section id="about" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h2 class="limit-width-desktop">About</h2>
+            <div class="bio limit-width-desktop">
+                <p>With over 15 years of distinguished experience navigating the world of American Western art, Caitlin Nielson brings expertise to every appraisal. As an accredited member of the prestigious Appraisers Association of America, Caitlin has cultivated a reputation for meticulous attention to detail and comprehensive knowledge of this distinctive artistic tradition.</p>
+                <p>Based in the inspiring landscape of Sun Valley, Idaho, Caitlin's practice seamlessly blends scholarly rigor with practical market insight. Her extensive professional network spans top-tier museums, renowned galleries, discerning private collectors, and major auction houses across the country.</p>
+            </div>
         </section>
 
         <section id="appraisals" data-aos="fade-up" data-aos-delay="100">
-            <h2>Appraisal Services</h2>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2 class="limit-width-desktop">Appraisal Services</h2>
+            <div class="bio limit-width-desktop">
+                <p>Every appraisal Caitlin conducts adheres strictly to the Uniform Standards for Professional Appraisal Practice (USPAP), ensuring each valuation meets current industry standards and provides clients with legally defensible documentation. This commitment to excellence has made her a trusted resource for clients nationwide seeking valuations.</p>
+                <p>Caitlin's provides a tailored service, working closely with each client to determine the scope of the work needed, and delivers thorough, well-researched appraisal reports. Her expertise encompasses multiple appraisal purposes, including:</p>
+                <ul>
+                    <li>Estate Tax or Planning - Comprehensive valuations that satisfy IRS requirements and facilitate smooth estate transitions</li>
+                    <li>Charitable Contributions or Donations - Precise documentation supporting tax deductions for art donations to qualified organizations</li>
+                    <li>Insurance Coverage - Detailed assessments ensuring proper protection for valuable Western art investments</li>
+                </ul>
+                <p>Whether evaluating a single piece or an extensive collection, Caitlin brings the same level of dedication and expertise to every project, helping clients make informed decisions about their Western art assets.</p>
+            </div>
         </section>
 
         <section id="gallery" data-aos="fade-up" data-aos-delay="200">
             <h2>Gallery</h2>
             <div class="gallery">
-                <img src="https://picsum.photos/400/300" alt="Gallery image">
-                <img src="https://picsum.photos/401/300" alt="Gallery image">
-                <img src="https://picsum.photos/402/300" alt="Gallery image">
-                <img src="https://picsum.photos/403/300" alt="Gallery image">
+                <div class="gallery-item">
+                    <img src="./assets/1.jpg" alt="Gallery image">
+                    <span>Jaqueline Rochester</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/2.jpg" alt="Gallery image">
+                    <span>Scout Dunbar</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/3.jpg" alt="Gallery image">
+                    <span>Robert Daughters</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/4.jpg" alt="Gallery image">
+                    <span>Theodore Waddell</span>
+                </div>
             </div>
         </section>
 
         <section id="contact" data-aos="fade-up" data-aos-delay="300">
-            <h2>Contact</h2>
-            <p>For appraisal inquiries, please reach out:</p>
-            <p>Phone: (555) 123-4567<br>
+            <h2 class="limit-width-desktop">Contact</h2>
+            <p class="limit-width-desktop">For appraisal inquiries, please reach out:</p>
+            <p class="limit-width-desktop">Phone: (555) 123-4567<br>
             Email: info@cmnielson.com</p>
         </section>
     </main>
